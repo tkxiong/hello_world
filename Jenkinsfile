@@ -1,8 +1,10 @@
 pipeline {
     agent any
     stages {
-        steps {
-            docker build . -t ubuntu-build:22.04
+        stage('build docker') {
+            steps {
+                docker build . -t ubuntu-build:22.04
+            }
         }
     }
 }
