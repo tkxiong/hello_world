@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build docker') {
             steps {
-                docker build . -t ubuntu-build:22.04
+                sh 'docker build . -t ubuntu-build:22.04'
             }
         }
     }
